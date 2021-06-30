@@ -1,0 +1,64 @@
+import random
+
+sort = 0
+maior = 0
+tudo = []
+i = 0
+um=[] 
+dois=[]
+tres=[]
+quatro=[]
+cinco=[]
+seis=[]
+
+while i <= 19:
+  numero = random.randrange(1,7)
+  if numero == 1:
+    print(numero)
+    i += 1
+    um.append(1)
+  elif numero == 2:
+    print(numero)
+    i += 1
+    dois.append(1)
+  elif numero == 3:
+    print(numero)
+    i += 1
+    tres.append(1)
+  elif numero == 4:
+    print(numero)
+    i += 1
+    quatro.append(1)
+  elif numero == 5:
+    print(numero)
+    i += 1
+    cinco.append(1)
+  elif numero == 6:
+    print(numero)
+    i += 1
+    seis.append(1)
+
+contagem1 = len(um)
+contagem2 = len(dois)
+contagem3 = len(tres)
+contagem4 = len(quatro)
+contagem5 = len(cinco)
+contagem6 = len(seis)
+
+tudo = (contagem1,contagem2,contagem3,contagem4,contagem5,contagem6)
+maior = max(tudo)
+
+if maior == contagem1:
+  sort = 1
+elif maior == contagem2:
+  sort = 2
+elif maior == contagem3:
+  sort = 3
+elif maior == contagem4:
+  sort = 4
+elif maior == contagem5:
+  sort = 5
+elif maior == contagem6:
+  sort = 6
+
+print("O número 1 foi sorteado {0} vezes!\nO número 2 foi sorteado {1} vezes!\nO número 3 foi sorteado {2} vezes!\nO número 4 foi sorteado {3} vezes!\nO número 5 foi sorteado {4} vezes!\nO número 6 foi sorteado {5} vezes!\nO número mais vezes sorteado foi o {6}! ".format(contagem1,contagem2,contagem3,contagem4,contagem5,contagem6,sort))
