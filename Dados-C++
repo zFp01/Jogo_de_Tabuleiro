@@ -1,0 +1,38 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<math.h>
+#include<time.h>
+
+
+int main(){
+   int nummaior=0, numvezes=0, i, v[20];
+
+
+   srand(time(NULL)); //retira informações da hora do sistema para a criação de numeros randomicos.
+    
+    //Preenchendo vetores com valores a serem usados
+   
+    for(i = 0; i < 20; i++)
+        v[i] = 1 + rand() % 6;
+   
+    printf("Dados Viciados? Vamos descobrir! \n");
+    
+    // Exibindo na tela os números sorteados:
+      for(i = 0; i < 20; i++){
+            printf("O numero sorteado na rodada %d foi: %d \n", i, v[i]); 
+      }
+     
+
+   for(i=1;i<7;i++){
+       printf("\nNumero %d: %d vez(es)\n", i, v[i]);
+       
+       if (v[i]>numvezes){
+           numvezes=v[i]; 
+           nummaior=i;
+       }
+   }
+   
+   printf("\nValor encontrado! O número do dado %d apareceu %d vezes!", nummaior, numvezes);
+
+   return 0;
+}
